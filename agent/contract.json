@@ -1,0 +1,21 @@
+{
+  "name": "groundwater-intelligence-agent",
+  "version": "1.0.0",
+  "inputSchema": {
+    "type": "object",
+    "required": ["waterLevel"],
+    "properties": {
+      "waterLevel": {"type": "number"},
+      "location": {"type": "string"}
+    }
+  },
+  "outputSchema": {
+    "required": ["agent", "input", "assessment", "timestamp"],
+    "assessment": ["waterLevel", "status", "risk", "recommendation"]
+  },
+  "behavior": {
+    "deterministic": true,
+    "sideEffects": false,
+    "sameInputSameAssessment": true
+  }
+}

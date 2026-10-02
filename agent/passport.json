@@ -1,0 +1,28 @@
+{
+  "passportVersion": "1.0",
+  "agent": {
+    "id": "groundwater-intelligence-agent",
+    "name": "Groundwater Intelligence Agent",
+    "version": "1.0.0",
+    "purpose": "Evaluate DWLR groundwater measurements and provide transparent monitoring recommendations",
+    "domain": "groundwater-monitoring"
+  },
+  "capabilities": [
+    "read-water-level",
+    "evaluate-groundwater-risk",
+    "provide-monitoring-recommendation",
+    "return-verifiable-agent-response"
+  ],
+  "transport": {
+    "protocol": "HTTP+JSON",
+    "health": "/health",
+    "manifest": "/agent/passport",
+    "invoke": "/agent/invoke",
+    "verify": "/agent/verify"
+  },
+  "verification": {
+    "deterministicEvaluation": true,
+    "transparentRules": true,
+    "verificationEndpoint": "/agent/verify"
+  }
+}
